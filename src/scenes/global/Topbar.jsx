@@ -16,8 +16,8 @@ function Topbar() {
     return (<>
         <Box display="flex" justifyContent="space-between" p={2}>
             <Box display="flex" bgcolor={colors.primary[400]} borderRadius="6px" alignItems="center" padding="3px">
-                <InputBase sx={{ ml: 2, flex: 1 }}></InputBase>
-                <SearchIcon sx={{ mr: 1 }} />
+                <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
+                <SearchIcon sx={{ mr: 1, cursor: "pointer" }} />
             </Box>
 
             <Box display="flex" gap="4px">
@@ -25,7 +25,7 @@ function Topbar() {
                     {
                         theme.palette.mode === 'dark' ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />
                     }
-                    
+
                 </IconButton>
                 <IconButton>
                     <PersonOutlinedIcon />

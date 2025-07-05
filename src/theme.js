@@ -172,6 +172,14 @@ export const themeSettings = (mode) => {
                 fontFamily: 'monospace',
                 fontSize: 24,
             },
+            h4: {
+                fontFamily: 'monospace',
+                fontSize: 18
+            },
+            h5: {
+                fontFamily: 'monospace',
+                fontSize: 14
+            },
             p: {
                 fontFamily: 'monospace',
                 fontSize: 16,
