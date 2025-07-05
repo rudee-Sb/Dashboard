@@ -184,6 +184,10 @@ export const themeSettings = (mode) => {
                 fontFamily: 'monospace',
                 fontSize: 16,
             },
+            sidebarItem: {
+                fontFamily: 'monospace',
+                fontSize: 12,
+            },
         }
     }
 }

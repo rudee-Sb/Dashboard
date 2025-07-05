@@ -1,5 +1,6 @@
-
-#root, .app, .content {
+#root,
+.app,
+.content {
     height: 100%;
     width: 100%;
 }
@@ -31,5 +32,15 @@
 }
 
 .css-1umw9bq-MuiSvgIcon-root {
-    width: 20px !important;
+    width: 18px !important;
+    height:  18px !important;
+}
+
+.css-1t8x7v1>.ps-menu-button:hover {
+    background: transparent !important;
+    color: #4ad1db !important;
+}
+
+.css-hjc5kd-MuiButtonBase-root-MuiIconButton-root {
+    padding: 8px 10px !important;
 }

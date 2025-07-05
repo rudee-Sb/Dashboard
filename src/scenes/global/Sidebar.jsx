@@ -26,7 +26,7 @@ const Item = ({ title, selected, setSelected, icon }) => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <MenuItem active={selected === title} style={{ color: colors.grey[100] }} onClick={() => setSelected(title)} icon={icon}>
+        <MenuItem className="sidebar-items" active={selected === title} style={{ color: colors.grey[100] }} onClick={() => setSelected(title)} icon={icon}>
             <Typography variant="h5">{title}</Typography>
         </MenuItem>
     )
@@ -41,20 +41,33 @@ function Sidebarr() {
 
     return (<>
         <Box sx={{
-            "& .pro-sidebar-inner": {
-                background: `${colors.primary[400]} !important`,
+            // "& .pro-sidebar-inner": {
+            //     background: `${colors.primary[400]} !important`,
+            // },
+            // "& pro-icon-wrapper": {
+            //     backgroundColor: "transparent !important",
+            // },
+            // "& .pro-inner-item": {
+            //     padding: "5px 35px 5px 20px !important",
+            // },
+            // "& .pro-inner-item:hover": {
+            //     color: "#868dfb !important",
+            // },
+            // "& .pro-inner-item.active": {
+            //     color: "#6870fa !important",
+            // },
+            ".ps-menuitem-root:hover": {
+                backgroundColor: "transparent !important"
             },
-            "& pro-icon-wrapper": {
-                backgroundColor: "transparent !important",
+            ".css-1wvake5.ps-collapsed .css-2bdxkn": {
+                borderBottomRightRadius: "24px !important",
+                paddingBottom: "10px !important",
+                border:"none !important"
+                // borderBottomLeftRadius: "44px !important"
             },
-            "& .pro-inner-item": {
-                padding: "5px 35px 5px 20px !important",
-            },
-            "& .pro-inner-item:hover": {
-                color: "#868dfb !important",
-            },
-            "& .pro-inner-item.active": {
-                color: "#6870fa !important",
+            ".css-1wvake5.ps-collapsed": {
+                borderBottomRightRadius: "27px !important",
+                borderRight:"1.4px solidrgba(239, 239, 239, 0.77) !important"
             }
         }}>
             <Sidebar collapsed={isCollapsed} backgroundColor={colors.primary[400]}>
@@ -71,7 +84,7 @@ function Sidebarr() {
                         {!isCollapsed && (
                             <Box display="flex" justifyContent="space-between" alignItems='center' ml="15px">
                                 <Typography variant="h3" color={colors.grey[100]}>Dashboard</Typography>
-                                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                                <IconButton sx={{padding:"9px"}} onClick={() => setIsCollapsed(!isCollapsed)}>
                                     <MenuOutlinedIcon />
                                 </IconButton>
                             </Box>
@@ -93,15 +106,15 @@ function Sidebarr() {
                     }
                     {
                         <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-                            <Typography variant="h5" display={!isCollapsed ? "block" : "none"} color={colors.grey[300]} sx={{ m: "15px 0px 5px 20px" }}>USER</Typography>
+                            <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15x 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >USER</Typography>
                             <Item title="Profile" icon={<PersonOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Contact" icon={<ContactsOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Help" icon={<HelpOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
-                            <Typography variant="h5" color={colors.grey[300]} display={!isCollapsed ? "block" : "none"} sx={{ m: "15px 0px 5px 20px" }}>PROJECTS</Typography>
+                            <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15px 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >PROJECTS</Typography>
                             <Item title="Work" icon={<QuizOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Github" icon={<GitHubIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Linkedin" icon={<LinkedInIcon />} selected={selected} setSelected={setSelected}></Item>
-                            <Typography variant="h5" color={colors.grey[300]} display={!isCollapsed ? "block" : "none"} sx={{ m: "15px 0px 5px 20px" }}>WIDGETS</Typography>
+                            <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15px 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >WIDGETS</Typography>
                             <Item title="Stop Watch" icon={<LockClockOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Notes" icon={<NotesOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
 
