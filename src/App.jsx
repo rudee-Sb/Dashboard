@@ -2,7 +2,8 @@ import { colorModeContext, useMode } from './theme'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import Topbar from './scenes/global/Topbar';
 import Sidebar from './scenes/global/Sidebar';
-import Calender from './scenes/global/GithubContri';
+import Calender from './widgets/GithubContri';
+import ImagePins from './widgets/Pins';
 
 function App(){
 
@@ -16,6 +17,7 @@ function App(){
                     <Sidebar/>
                     <main className="content">
                         <Topbar />
+                        <ImagePins />
                     </main>
                 </div>
             </ThemeProvider>

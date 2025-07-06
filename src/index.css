@@ -33,7 +33,7 @@
 
 .css-1umw9bq-MuiSvgIcon-root {
     width: 18px !important;
-    height:  18px !important;
+    height: 18px !important;
 }
 
 .css-1t8x7v1>.ps-menu-button:hover {
@@ -43,4 +43,23 @@
 
 .css-hjc5kd-MuiButtonBase-root-MuiIconButton-root {
     padding: 8px 10px !important;
+}
+
+.pins-wrapper .random-img-btn {
+    display: none !important;
+    transition: opacity 0.2s ease !important;
+    opacity: 0 !important;
+}
+
+.pins-wrapper:hover .random-img-btn {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+.pins-img {
+    transition: opacity 0.2s ease;
+}
+
+.pins-wrapper:hover .pins-img {
+    opacity: 0.5;
 }
