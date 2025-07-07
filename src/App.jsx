@@ -6,6 +6,7 @@ import ContriGraph from './widgets/GithubContri';
 import ImagePins from './widgets/Pins';
 import Clock from './widgets/Clock';
 import Dashboard from './scenes/dashboard/Dashboard';
+import Pomodoro from './scenes/Pomodoro';
 
 function App(){
 
@@ -19,7 +20,8 @@ function App(){
                     <Sidebar/>
                     <main className="content">
                         <Topbar />
-                        <Dashboard />
+                        {/* <Dashboard /> */}
+                        <Pomodoro />
                         {/* <ImagePins /> */}
                         {/* <ContriGraph /> */}
                         {/* <Clock /> */}
