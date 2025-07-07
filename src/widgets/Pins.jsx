@@ -8,21 +8,24 @@ function ImagePins() {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
-    const fileNames = ["pin1.jpg", "pin2.jpg", "pin3.jpg"];
-    const makeUrl = (name) => `/pins/${name}`;
+    const fileNames = ["pin1.jpg", "pin2.jpg", "pin3.jpg", "pin4.jpg", "pin5.jpg", "pin6.jpg"];
+    const makeUrl = (name) => `src\\assets\\pins\\${name}`;
 
-    // const [src, setSrc] = useState(makeUrl(fileNames[0]));
+    const [index, setIndex] = useState(0);
+    const [src, setSrc] = useState(makeUrl(fileNames[0]));
 
-    const showRandom = () =>
-        setSrc(makeUrl(fileNames[Math.floor(Math.random() * fileNames.length)]));
+    const showNext = () => {
+        const nextIndex = (index + 1) % fileNames.length;
+        setIndex(nextIndex);
+        setSrc(makeUrl(fileNames[nextIndex]));
+    };
 
-    const src = `src\\assets\\user-prof.jpg`
 
     return (
         <>
-            <Box className="pins-wrapper" display="flex" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="fit-content" position="relative" ml="15px">
-                <img src={src} alt="pin" width={170} height="auto" className="pins-img" style={{ borderRadius: "8px", objectFit: "contain" }} />
-                <IconButton className="random-img-btn" sx={{ padding: "5px", position: "absolute", right: '7%', bottom: "7%", color: "#c2c2c2" }} size="20" onClick={showRandom}>
+            <Box className="pins-wrapper" display="flex" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="200px" height="200px" position="relative" ml="15px">
+                <img src={src} alt="pin" width={170} height="auto" className="pins-img" style={{ borderRadius: "8px", objectFit: "contain" , pointerEvents:"none"}} />
+                <IconButton className="random-img-btn" sx={{ padding: "5px", position: "absolute", right: '10%', bottom: "10%", color: "#efefef" }} size="20" onClick={showNext}>
                     <RotateLeftOutlinedIcon />
                 </IconButton>
             </Box>
