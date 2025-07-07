@@ -20,7 +20,7 @@ function ImagePins() {
 
     return (
         <>
-            <Box className="pins-wrapper" display="flex" padding="15px" borderRadius="10px" bgcolor={colors.primary[700]} width="fit-content" position="relative" ml="10px">
+            <Box className="pins-wrapper" display="flex" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="fit-content" position="relative" ml="15px">
                 <img src={src} alt="pin" width={170} height="auto" className="pins-img" style={{ borderRadius: "8px", objectFit: "contain" }} />
                 <IconButton className="random-img-btn" sx={{ padding: "5px", position: "absolute", right: '7%', bottom: "7%", color: "#c2c2c2" }} size="20" onClick={showRandom}>
                     <RotateLeftOutlinedIcon />

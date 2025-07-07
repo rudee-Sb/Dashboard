@@ -1,9 +1,9 @@
 import GitHubCalendar from 'react-github-calendar'
 
-function Calender() {
+function ContriGraph() {
     return (<>
         <GitHubCalendar username="rudee-Sb" />
     </>)
 }
 
-export default Calender
+export default ContriGraph

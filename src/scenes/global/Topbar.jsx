@@ -15,7 +15,7 @@ function Topbar() {
 
     return (<>
         <Box display="flex" justifyContent="space-between" p={2}>
-            <Box display="flex" bgcolor={colors.primary[400]} borderRadius="6px" alignItems="center" padding="3px">
+            <Box display="flex" bgcolor={colors.primary[400]} borderRadius="6px" alignItems="center" padding="3px" width="220px">
                 <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
                 <SearchIcon sx={{ mr: 1, cursor: "pointer" }} />
             </Box>
