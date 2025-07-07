@@ -180,6 +180,10 @@ export const themeSettings = (mode) => {
                 fontFamily: 'monospace',
                 fontSize: 14
             },
+            h6: {
+                fontFamily: 'monospace',
+                fontSize: 10
+            },
             p: {
                 fontFamily: 'monospace',
                 fontSize: 16,
