@@ -5,6 +5,7 @@ import Sidebar from './scenes/global/Sidebar';
 import ContriGraph from './widgets/GithubContri';
 import ImagePins from './widgets/Pins';
 import Clock from './widgets/Clock';
+import Dashboard from './scenes/dashboard/Dashboard';
 
 function App(){
 
@@ -18,9 +19,10 @@ function App(){
                     <Sidebar/>
                     <main className="content">
                         <Topbar />
-                        <ImagePins />
+                        <Dashboard />
+                        {/* <ImagePins /> */}
                         {/* <ContriGraph /> */}
-                        <Clock />
+                        {/* <Clock /> */}
                     </main>
                 </div>
             </ThemeProvider>
