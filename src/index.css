@@ -41,6 +41,11 @@
     color: #4ad1db !important;
 }
 
+.ps-active {
+    background: transparent !important;
+    color: #4ad1db !important;
+}
+
 .css-hjc5kd-MuiButtonBase-root-MuiIconButton-root {
     padding: 8px 10px !important;
 }
@@ -62,4 +67,26 @@
 
 .pins-wrapper:hover .pins-img {
     opacity: 0.5;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.note-save-btn {
+    background: transparent;
+    color: black;
+    font-weight: 600;
+    font-size: 9px;
+    padding: 4px 8px;
+    margin-right: 10pxs;
+    border-radius: 5px;
+    border: 1.4px solid black;
+    cursor: pointer;
+}
+
+.note-save-btn:hover {
+    background: black;
+    color: #e294a3;
+    border: 1.4px solid black;
 }

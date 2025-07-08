@@ -1,9 +1,9 @@
 import { Box, Typography, IconButton, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import InputBase from '@mui/material/InputBase';
-import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
-import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
-import RestartAltOutlinedIcon from "@mui/icons-material/RestartAltOutlined";
+import PauseCircleOutlineRoundedIcon from "@mui/icons-material/PauseCircleOutlineRounded";
+import PlayCircleFilledRoundedIcon from "@mui/icons-material/PlayCircleFilledRounded";
+import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import { useState, useEffect, useRef } from "react";
 import Header from "./global/Header";
 
@@ -112,7 +112,7 @@ function Pomodoro() {
                 </Box>
 
                 <Box display="flex" gap="5px" mt="10px">
-                    <Box display="flex" bgcolor={colors.primary[400]} borderRadius="6px" alignItems="center" padding="3px" width="80px" height="80px" m="5px">
+                    <Box display="flex" bgcolor={colors.primary[400]} borderRadius="6px" alignItems="center" padding="3px" width="180px" height="80px" m="5px">
                         <InputBase
                             sx={{ ml: 2.5, flex: 1, fontSize: "30px" }}
                             placeholder="W"
@@ -120,7 +120,7 @@ function Pomodoro() {
                             onChange={handleWorkInput}
                         />
                     </Box>
-                    <Box display="flex" bgcolor={colors.primary[400]} borderRadius="6px" alignItems="center" padding="3px" width="80px" height="80px" m="5px">
+                    <Box display="flex" bgcolor={colors.primary[400]} borderRadius="6px" alignItems="center" padding="3px" width="180px" height="80px" m="5px">
                         <InputBase
                             sx={{ ml: 2.5, flex: 1, fontSize: "30px" }}
                             placeholder="B"
@@ -132,11 +132,11 @@ function Pomodoro() {
 
                 <Box>
                     {isRunning ? (
-                        <IconButton onClick={pauseTimer} size="40px"><PauseCircleOutlineIcon sx={{ fontSize: "36px" }}/></IconButton>
+                        <IconButton onClick={pauseTimer} size="40px"><PauseCircleOutlineRoundedIcon sx={{ fontSize: "36px" }}/></IconButton>
                     ) : (
-                        <IconButton onClick={handleStartClick}><PlayArrowOutlinedIcon sx={{ fontSize: "36px" }} /></IconButton>
+                        <IconButton onClick={handleStartClick}><PlayCircleFilledRoundedIcon sx={{ fontSize: "36px" }} /></IconButton>
                     )}
-                    <IconButton onClick={resetTimer}><RestartAltOutlinedIcon sx={{ fontSize: "36px" }} /></IconButton>
+                    <IconButton onClick={resetTimer}><RestartAltRoundedIcon sx={{ fontSize: "36px" }} /></IconButton>
                 </Box>
             </Box>
         </Box>

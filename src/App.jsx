@@ -1,34 +1,33 @@
 import { colorModeContext, useMode } from './theme'
 import { CssBaseline, ThemeProvider } from '@mui/material'
+import { Routes, Route } from 'react-router-dom';
 import Topbar from './scenes/global/Topbar';
 import Sidebar from './scenes/global/Sidebar';
-import ContriGraph from './widgets/GithubContri';
-import ImagePins from './widgets/Pins';
-import Clock from './widgets/Clock';
 import Dashboard from './scenes/dashboard/Dashboard';
+import NoteApp from './scenes/notes/NoteApp';
 import Pomodoro from './scenes/Pomodoro';
 
-function App(){
+function App() {
 
     const [theme, colorMode] = useMode();
 
-    return(<>
+    return (<>
         <colorModeContext.Provider value={colorMode} >
             <ThemeProvider theme={theme} >
-                <CssBaseline/>
+                <CssBaseline />
                 <div className="app">
-                    <Sidebar/>
+                    <Sidebar />
                     <main className="content">
                         <Topbar />
-                        {/* <Dashboard /> */}
-                        <Pomodoro />
-                        {/* <ImagePins /> */}
-                        {/* <ContriGraph /> */}
-                        {/* <Clock /> */}
+                        <Routes >
+                            <Route path='/' element={ <Dashboard /> }></Route>
+                            <Route path='/pomodoro' element={ <Pomodoro /> }></Route>
+                            <Route path='/notes' element={ <NoteApp /> }></Route>
+                        </Routes>
                     </main>
                 </div>
             </ThemeProvider>
-        </colorModeContext.Provider>
+        </colorModeContext.Provider >
     </>)
 }
 
