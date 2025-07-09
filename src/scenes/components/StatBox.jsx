@@ -1,7 +1,6 @@
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import { tokens } from "../../theme";
 import ProgressCircle from "./ProgressCircle";
-import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
 
 function StatBox({ title, subtitle, icon, completed="0", total="0" }) {
     const theme = useTheme();
@@ -15,7 +14,7 @@ function StatBox({ title, subtitle, icon, completed="0", total="0" }) {
             <Box display="flex" justifyContent="space-between" flexDirection="row" height="100%" width="100%" padding="10px">
                 <Box display="flex" justifyContent="space-between" flexDirection="column" width="140px" textAlign="left" alignItems="start">
                     <IconButton>
-                        <AssignmentOutlinedIcon />
+                        {icon}
                     </IconButton>
                     <Typography mb={1} variant="h4" fontWeight="bold">{title}</Typography>
                     <Typography variant="h6" fontSize="11px" color={colors.pinkAccent[500]} fontStyle="italic">Completed: {completed} Total: {total}</Typography>

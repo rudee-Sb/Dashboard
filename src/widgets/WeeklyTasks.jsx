@@ -50,7 +50,7 @@ function WeeklyTasks({ onTasksUpdate }) {
     };
 
     return (<>
-        <Box width="420px" height="200px" display="flex" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} mt="20px">
+        <Box width="100%" height="200px" display="flex" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} mt="20px">
             <Typography variant="h4" fontWeight="500" fontSize="20px" sx={{ mb: "10px", whiteSpace: "nowrap" }}>
                 Weekly Tasks
             </Typography>

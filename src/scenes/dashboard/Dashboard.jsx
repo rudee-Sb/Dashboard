@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
+import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
+import AssignmentLateOutlinedIcon from '@mui/icons-material/AssignmentLateOutlined';
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
+import FitnessCenterOutlinedIcon from '@mui/icons-material/FitnessCenterOutlined';
 import Header from "../global/Header";
 import Clock from "../../widgets/Clock";
 import ImagePins from "../../widgets/Pins";
@@ -19,25 +23,26 @@ function Dashboard() {
             <Box display="flex" alignItems="center" justifyContent="space-between">
                 <Header title={"DASHBOARD"} subtitle={"Welcome Rudee !!"} />
             </Box>
-            {/* {/* <ImagePins />
-            <Clock />
-            <StickyNote /> */}
             <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="140px" gap="20px">
                 {/* Row 1 */}
                 <Box gridColumn="span 3" display="flex" alignItems="center" justifyContent="center">
-                    <StatBox title="TASKS" completed={completed} total={total} />
+                    <StatBox title="TASKS" completed={completed} total={total} icon={<AssignmentOutlinedIcon />} />
                 </Box>
                 <Box gridColumn="span 3" display="flex" alignItems="center" justifyContent="center">
-                    <StatBox title="PROJECTS" completed="12" total="15" />
+                    <StatBox title="PROJECTS" completed="12" total="15" icon={<Inventory2OutlinedIcon />} />
                 </Box>
                 <Box gridColumn="span 3" display="flex" alignItems="center" justifyContent="center">
-                    <StatBox title="WORKOUT" completed={"6"} total={"10"} />
+                    <StatBox title="WORKOUT" completed={"6"} total={"10"} icon={<FitnessCenterOutlinedIcon />} />
                 </Box>
                 <Box gridColumn="span 3" display="flex" alignItems="center" justifyContent="center">
-                    <StatBox title="ASSIGNMENTS" completed={"3"} total={"11"} />
+                    <StatBox title="ASSIGNMENTS" completed={"3"} total={"11"} icon={<AssignmentLateOutlinedIcon />} />
+                </Box>
+
+                {/* Row 2 */}
+                <Box gridColumn="span 4" >
+                    <WeeklyTasks onTasksUpdate={setTasks} />
                 </Box>
             </Box>
-            {/* <WeeklyTasks onTasksUpdate={setTasks} /> */}
         </Box>
     </>);
 }
