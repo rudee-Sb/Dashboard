@@ -6,6 +6,7 @@ import Sidebar from './scenes/global/Sidebar';
 import Dashboard from './scenes/dashboard/Dashboard';
 import NoteApp from './scenes/notes/NoteApp';
 import Pomodoro from './scenes/Pomodoro';
+import Calendar from './scenes/Calendar'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                             <Route path='/' element={ <Dashboard /> }></Route>
                             <Route path='/pomodoro' element={ <Pomodoro /> }></Route>
                             <Route path='/notes' element={ <NoteApp /> }></Route>
+                            <Route path='/calendar' element={ <Calendar /> }></Route>
                         </Routes>
                     </main>
                 </div>

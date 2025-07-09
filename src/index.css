@@ -41,6 +41,10 @@
     color: #4ad1db !important;
 }
 
+.css-1t8x7v1 >.ps-menu-button:not(.menuitem) {
+    height: 40px !important;
+}
+
 .ps-active {
     background: transparent !important;
     color: #4ad1db !important;
@@ -89,4 +93,8 @@ textarea:focus {
     background: black;
     color: #e294a3;
     border: 1.4px solid black;
+}
+
+.Weekely-tasks-list::-webkit-scrollbar {
+    display: none !important;
 }

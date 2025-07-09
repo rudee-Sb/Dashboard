@@ -21,7 +21,7 @@ import LinkedInIcon from "@mui/icons-material/Linkedin";
 // widget icons
 import LockClockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import NotesOutlinedIcon from "@mui/icons-material/NotesOutlined";
-// import CalenderTodayOutlinedIcon from '@mui/icons-material/CalenderTodayOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 const Item = ({ title, selected, setSelected, icon, to }) => {
@@ -70,7 +70,6 @@ function Sidebarr() {
                 borderBottomRightRadius: "24px !important",
                 paddingBottom: "10px !important",
                 border: "none !important"
-                // borderBottomLeftRadius: "44px !important"
             },
             ".css-1wvake5.ps-collapsed": {
                 borderBottomRightRadius: "27px !important",
@@ -89,8 +88,8 @@ function Sidebarr() {
                         }}
                     >
                         {!isCollapsed && (
-                            <Box display="flex" justifyContent="space-between" alignItems='center' ml="15px">
-                                <Typography variant="h3" color={colors.grey[100]}>Dashboard</Typography>
+                            <Box display="flex" justifyContent="space-between" alignItems='center' ml="15px" height="75px" >
+                                <Typography variant="h3" fontSize="20px" fontWeight="500" color={colors.grey[100]}>Dashboard</Typography>
                                 <IconButton sx={{ padding: "9px" }} onClick={() => setIsCollapsed(!isCollapsed)}>
                                     <MenuOutlinedIcon />
                                 </IconButton>
@@ -121,9 +120,11 @@ function Sidebarr() {
                             <Item title="Work" to="/projects" icon={<QuizOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Github" to="/github" icon={<GitHubIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Linkedin" to="/socials" icon={<LinkedInIcon />} selected={selected} setSelected={setSelected}></Item>
-                            <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15px 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >WIDGETS</Typography>
-                            <Item title="Stop Watch" to="/pomodoro" icon={<LockClockOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
+                            <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15px 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >UTILITIES</Typography>
+                            <Item title="Study Timer" to="/pomodoro" icon={<LockClockOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Notes" to="/notes" icon={<NotesOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
+                            <Item title="Calendar" to="/calendar" icon={<CalendarMonthOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
+                            <Item title="Random" to="/random" icon={<NotesOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                         </Box>
                     }
 
