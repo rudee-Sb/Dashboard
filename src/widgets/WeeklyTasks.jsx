@@ -2,7 +2,7 @@ import { Box, Typography, useTheme, IconButton, TextField, Checkbox, List, ListI
 import { tokens } from "../theme";
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function WeeklyTasks({ onTasksUpdate }) {
 
@@ -12,6 +12,19 @@ function WeeklyTasks({ onTasksUpdate }) {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
 
+    useEffect(() => {
+        const savedTasks = JSON.parse(localStorage.getItem("react-tasks-data"));
+        if (Array.isArray(savedTasks)) {
+            setTasks(savedTasks);
+        }
+    }, []);
+
+    useEffect(() => {
+        if (tasks.length > 0) {
+            localStorage.setItem("react-tasks-data", JSON.stringify(tasks));
+            onTasksUpdate(tasks); // only fire when there's something to update
+        }
+    }, [tasks]);
 
     const handleAddTask = () => {
         if (newTask.trim()) {
@@ -37,8 +50,8 @@ function WeeklyTasks({ onTasksUpdate }) {
     };
 
     return (<>
-        <Box width="420px" height="200px" display="flex" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]}>
-            <Typography variant="h4" fontWeight="500" fontSize="20px" sx={{ mb:"10px", whiteSpace:"nowrap" }}>
+        <Box width="420px" height="200px" display="flex" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} mt="20px">
+            <Typography variant="h4" fontWeight="500" fontSize="20px" sx={{ mb: "10px", whiteSpace: "nowrap" }}>
                 Weekly Tasks
             </Typography>
             <Box display="flex" gap={1} mb={1}>
@@ -50,7 +63,7 @@ function WeeklyTasks({ onTasksUpdate }) {
                     fullWidth
                 />
                 <IconButton onClick={handleAddTask}>
-                    <AddOutlinedIcon htmlColor="#a3a3a3"/>
+                    <AddOutlinedIcon htmlColor="#a3a3a3" />
                 </IconButton>
             </Box>
 
@@ -66,7 +79,7 @@ function WeeklyTasks({ onTasksUpdate }) {
                             <ListItemText primary={task.text} />
                             <ListItemSecondaryAction>
                                 <IconButton edge="end" onClick={() => handleDelTask(index)}>
-                                    <ClearOutlinedIcon  htmlColor="#ce4c66" ></ClearOutlinedIcon>
+                                    <ClearOutlinedIcon htmlColor="#ce4c66" ></ClearOutlinedIcon>
                                 </IconButton>
                             </ListItemSecondaryAction>
                         </ListItem>
