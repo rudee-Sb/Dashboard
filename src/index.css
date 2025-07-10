@@ -116,7 +116,7 @@ textarea:focus {
 .days-span {
     font-size: clamp(1rem, 1cqi, 1.4rem);
     width: calc(100% / 7);
-    padding: 18px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;

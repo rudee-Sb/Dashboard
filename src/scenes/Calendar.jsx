@@ -17,24 +17,35 @@ function Calendar() {
     const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
     const CurrentDate = new Date();
 
-    const [currentMonth, setCurrentMonth] = useState(CurrentDate.getMonth());
-    const [currentYear, setCurrentYear] = useState(CurrentDate.getFullYear());
-
-    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-    const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+    const [date, setDate] = useState({
+        month: CurrentDate.getMonth(),
+        year: CurrentDate.getFullYear(),
+    });
+    
+    const daysInMonth = new Date(date.year, date.month + 1, 0).getDate();
+    const firstDayOfMonth = new Date(date.year, date.month, 1).getDay();
 
     console.log(firstDayOfMonth);
 
 
-    const prevMonth = () => {
-        setCurrentMonth((prevMonth) => (prevMonth === 0 ? 11 : prevMonth - 1));
-        setCurrentYear((prevYear) => (currentMonth === 0 ? prevYear - 1 : prevYear));
-    }
-
     const nextMonth = () => {
-        setCurrentMonth((prevMonth) => (prevMonth === 11 ? 0 : prevMonth + 1));
-        setCurrentYear((prevYear) => (prevMonth === 11 ? prevYear + 1 : prevYear));
-    }
+        setDate(({ month, year }) => {
+            if (month === 11) {
+                return { month: 0, year: year + 1 };
+            }
+            return { month: month + 1, year };
+        });
+    };
+
+    const prevMonth = () => {
+        setDate(({ month, year }) => {
+            if (month === 0) {
+                return { month: 11, year: year - 1 };
+            }
+            return { month: month - 1, year };
+        });
+    };
+
 
     return (<>
         <Box m="20px">
@@ -44,7 +55,7 @@ function Calendar() {
                 <Box bgcolor={colors.primary[500]} borderRadius="10px" display="flex" justifyContent="space-between" flexDirection="column" p="15px" width="52%">
                     <Box display="flex" flexDirection="row" alignItems="flex-start">
                         <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-                            <Box><Typography variant="h2" color={colors.grey[300]} pl="10px">{months[currentMonth]}, {currentYear}</Typography></Box>
+                            <Box><Typography variant="h2" color={colors.grey[300]} pl="10px">{months[date.month]}, {date.year}</Typography></Box>
                             <Box display="flex" alignItems="center">
                                 <IconButton sx={{ padding: "6px !important" }} onClick={prevMonth}>
                                     <ArrowCircleLeftOutlinedIcon htmlColor="#c2c2c2" />
@@ -56,18 +67,18 @@ function Calendar() {
                             </Box>
                         </Box>
                     </Box>
-                    <Box borderRadius="10px" margin="20px 0px" display="flex" justifyContent="space-between" flexDirection="column" gap="20px">
+                    <Box borderRadius="10px" margin="20px 10px 0px 0px" display="flex" justifyContent="space-between" flexDirection="column" gap="20px">
                         <Box width="100%" display="flex">
                             {daysOfWeek.map((day) => <span className="weekdays-span" key={day}>{day}</span>)}
                         </Box>
                         <Divider />
                         <Box display="flex" flexWrap="wrap">
                             {[...Array(firstDayOfMonth).keys()].map((_, index) => (
-                                <span key={`empty-${index}`} />
+                                <span className="days-span" key={`empty-${index}`} />
                             ))}
                             {[...Array(daysInMonth).keys()].map((day) => (
                                 <span className={
-                                    day + 1 === CurrentDate.getDate() && currentMonth === CurrentDate.getMonth() && currentYear === CurrentDate.getFullYear() ? "currentday-span days-span" : "days-span"
+                                    day + 1 === CurrentDate.getDate() && date.month === CurrentDate.getMonth() && date.year === CurrentDate.getFullYear() ? "currentday-span days-span" : "days-span"
                                 } key={day + 1}>{day + 1}</span>
                             ))}
                         </Box>
