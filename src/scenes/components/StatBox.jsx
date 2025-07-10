@@ -17,11 +17,11 @@ function StatBox({ title, subtitle, icon, completed="0", total="0" }) {
                         {icon}
                     </IconButton>
                     <Typography mb={1} variant="h4" fontWeight="bold">{title}</Typography>
-                    <Typography variant="h6" fontSize="11px" color={colors.pinkAccent[500]} fontStyle="italic">Completed: {completed} Total: {total}</Typography>
+                    <Typography variant="h6" fontSize="11px" color={colors.greenAccent[500]} fontStyle="italic">Completed: {completed} Total: {total}</Typography>
                 </Box>
                 <Box display="flex" justifyContent="space-between" flexDirection="column" width="100%" alignItems="flex-end">
                     <ProgressCircle progress={progress}/>
-                    <Typography variant="h5" fontStyle="italic" mb="7px" mr="5px">{percentage == null ? null : `"${percentage}%"` }</Typography>
+                    <Typography variant="h5" fontStyle="italic" mb="7px" mr="5px" color={colors.grey[400]}>{percentage == null ? null : `"${percentage}%"` }</Typography>
                 </Box>
             </Box>
         </Box>

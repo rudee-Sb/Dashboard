@@ -23,8 +23,8 @@ function ImagePins() {
 
     return (
         <>
-            <Box className="pins-wrapper" display="flex" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="200px" height="200px" position="relative" ml="15px">
-                <img src={src} alt="pin" width={170} height="auto" className="pins-img" style={{ borderRadius: "8px", objectFit: "contain" , pointerEvents:"none"}} />
+            <Box className="pins-wrapper" display="flex" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="100%" position="relative">
+                <img src={src} alt="pin" width="100%" height="auto" className="pins-img" style={{ borderRadius: "8px", objectFit: "contain" , pointerEvents:"none"}} />
                 <IconButton className="random-img-btn" sx={{ padding: "5px", position: "absolute", right: '10%', bottom: "10%", color: "#efefef" }} size="20" onClick={showNext}>
                     <RotateLeftOutlinedIcon />
                 </IconButton>

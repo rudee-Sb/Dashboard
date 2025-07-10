@@ -39,8 +39,31 @@ function Dashboard() {
                 </Box>
 
                 {/* Row 2 */}
-                <Box gridColumn="span 4" >
+                <Box gridColumn="span 4" height="145px" >
                     <WeeklyTasks onTasksUpdate={setTasks} />
+                </Box>
+                <Box gridColumn="span 4" height="145px" >
+                    <WeeklyTasks onTasksUpdate={setTasks} />
+                </Box>
+                <Box gridColumn="span 4" height="145px" >
+                    <WeeklyTasks onTasksUpdate={setTasks} />
+                </Box>
+
+                {/* Row 3 */}
+                <Box gridColumn="span 3">
+                    <Clock ></Clock>
+                </Box>
+                <Box gridColumn="span 3">
+                    <StickyNote />
+                </Box>
+                <Box gridColumn="span 2">
+                    <ImagePins />
+                </Box>
+                <Box gridColumn="span 2">
+                    <ImagePins />
+                </Box>
+                <Box gridColumn="span 2">
+                    <ImagePins />
                 </Box>
             </Box>
         </Box>

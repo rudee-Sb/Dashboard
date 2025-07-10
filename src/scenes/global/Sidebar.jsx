@@ -20,7 +20,7 @@ import LinkedInIcon from "@mui/icons-material/Linkedin";
 
 // widget icons
 import LockClockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
-import NotesOutlinedIcon from "@mui/icons-material/NotesOutlined";
+import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
@@ -122,9 +122,9 @@ function Sidebarr() {
                             <Item title="Linkedin" to="/socials" icon={<LinkedInIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15px 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >UTILITIES</Typography>
                             <Item title="Study Timer" to="/pomodoro" icon={<LockClockOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
-                            <Item title="Notes" to="/notes" icon={<NotesOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
+                            <Item title="Notes" to="/notes" icon={<EditNoteOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Calendar" to="/calendar" icon={<CalendarMonthOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
-                            <Item title="Random" to="/random" icon={<NotesOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
+                            <Item title="Random" to="/random" icon={<EditNoteOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                         </Box>
                     }
 

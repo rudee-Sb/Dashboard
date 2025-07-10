@@ -8,9 +8,9 @@ function StickyNote() {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box display="flex" justifyContent="space-between" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="200px" height="200px" mt="15px" ml="15px">
-            <Typography variant="h3" color={colors.grey[100]} fontWeight="600">NOTES</Typography>
-            <AddNote w="170px" h="125px" />
+        <Box display="flex" justifyContent="space-between" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="auto">
+            <Typography variant="h3" color={colors.grey[100]} fontWeight="600" mb={1}>NOTES</Typography>
+            <AddNote w="100%" h="110px" />
         </Box>
     );
 }

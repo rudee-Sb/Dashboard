@@ -50,11 +50,11 @@ function WeeklyTasks({ onTasksUpdate }) {
     };
 
     return (<>
-        <Box width="100%" height="200px" display="flex" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} mt="20px">
-            <Typography variant="h4" fontWeight="500" fontSize="20px" sx={{ mb: "10px", whiteSpace: "nowrap" }}>
+        <Box width="100%" height="100%" display="flex" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]}>
+            <Typography variant="h4" fontWeight="600" fontSize="20px" sx={{ mb: "10px", whiteSpace: "nowrap" }}>
                 Weekly Tasks
             </Typography>
-            <Box display="flex" gap={1} mb={1}>
+            <Box display="flex" gap={1} mt="5px" height="50px">
                 <TextField
                     size="small"
                     placeholder="New Task"

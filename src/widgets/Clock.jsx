@@ -57,7 +57,7 @@ function Clock() {
     }
 
     return (<>
-        <Box width="200px" height="100px" bgcolor={colors.primary[400]} borderRadius="10px" padding="10px" display="flex" alignItems="center" justifyContent="center" sx={{cursor:"pointer"}} ml="15px" mt="15px">
+        <Box width="100%" bgcolor={colors.primary[400]} borderRadius="10px" padding="10px" display="flex" alignItems="center" justifyContent="center" sx={{cursor:"pointer"}}>
             <div className="clock-container" style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
                 <Typography variant="h1" fontSize="40px">{displayTime()}</Typography>
                 <div className="clock-day-container">

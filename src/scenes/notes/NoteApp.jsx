@@ -41,6 +41,7 @@ function NoteApp() {
     const delNote = (id) => {
         const newNotes = notes.filter((note) => note.id !== id);
         setNotes(newNotes);
+        localStorage.setItem('react-notes-data', JSON.stringify(newNotes));
     }
 
     return (<>
