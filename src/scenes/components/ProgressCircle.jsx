@@ -15,7 +15,7 @@ function ProgressCircle({ progress, size = "50" }) {
                 ${colors.blueAccent[500]} 0deg ${angle}deg,
                 transparent ${angle}deg 360deg
                 ),
-                ${colors.pinkAccent[300]}
+                ${colors.greenAccent[300]}
             `,
             borderRadius: "50%",
             width: `${size}px`,

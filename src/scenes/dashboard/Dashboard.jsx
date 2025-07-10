@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
+import { tokens } from "../../theme";
 import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
 import AssignmentLateOutlinedIcon from '@mui/icons-material/AssignmentLateOutlined';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
@@ -10,8 +11,12 @@ import ImagePins from "../../widgets/Pins";
 import StickyNote from "../../widgets/StickyNote"
 import WeeklyTasks from "../../widgets/WeeklyTasks";
 import StatBox from "../components/StatBox";
+import ContriGraph from "../../widgets/GithubContri";
 
 function Dashboard() {
+
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
 
     const [tasks, setTasks] = useState([]);
 
@@ -39,14 +44,14 @@ function Dashboard() {
                 </Box>
 
                 {/* Row 2 */}
-                <Box gridColumn="span 4" height="145px" >
-                    <WeeklyTasks onTasksUpdate={setTasks} />
+                <Box gridColumn="span 7" height="145px" >
+                    <ContriGraph ></ContriGraph>
                 </Box>
                 <Box gridColumn="span 4" height="145px" >
                     <WeeklyTasks onTasksUpdate={setTasks} />
                 </Box>
-                <Box gridColumn="span 4" height="145px" >
-                    <WeeklyTasks onTasksUpdate={setTasks} />
+                <Box gridColumn="span 1" height="145px">
+                    
                 </Box>
 
                 {/* Row 3 */}
