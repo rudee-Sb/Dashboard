@@ -18,7 +18,7 @@ import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 // project work icons
 import QuizOutlinedIcon from "@mui/icons-material/QuizOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/Linkedin";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // widget icons
 import LockClockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
