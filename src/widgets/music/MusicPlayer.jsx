@@ -92,6 +92,7 @@ function Music() {
   return (
     <Box
       width="100%"
+      height="85px"
       bgcolor={colors.primary[400]}
       borderRadius="10px"
       padding="10px"
@@ -118,17 +119,36 @@ function Music() {
 
       {/* Metadata + Controls */}
       <Box display="flex" alignItems="center" width="70%" flexDirection="column">
-        <Box width="100%">
-          <Typography variant="h6" fontWeight="500" fontSize="11px">{track.title}</Typography>
-          <Typography variant="h6" fontWeight="400" fontSize="10px" color={colors.greenAccent[400]}>
-            {track.artist}
-          </Typography>
-          <audio
-            ref={audioRef}
-            src={track.src}
-            onLoadedMetadata={onLoadedMetadata}
-            onTimeUpdate={handleTimeUpdate}
-          />
+        <Box display="flex" alignItems="start" justifyContent="space-between" flexDirection="row">
+          <Box width="100%">
+            <Typography variant="h6" fontWeight="500" fontSize="11px">{track.title}</Typography>
+            <Typography variant="h6" fontWeight="400" fontSize="10px" color={colors.greenAccent[400]}>
+              {track.artist}
+            </Typography>
+            <audio
+              ref={audioRef}
+              src={track.src}
+              onLoadedMetadata={onLoadedMetadata}
+              onTimeUpdate={handleTimeUpdate}
+            />
+          </Box>
+        
+           {/* Controls */}
+          <Box display="flex" alignItems="center" justifyContent="center" gap="8px" mt="5px">
+            <IconButton onClick={prevTrack} sx={{ p: 0, minWidth: 0 }}>
+              <SkipPreviousIcon sx={{ fontSize: '10px' }} />
+            </IconButton>
+            <IconButton onClick={playMusic} sx={{ p: 0, minWidth: 0 }}>
+              {isPlaying ? (
+                <StopCircleIcon sx={{ fontSize: '10px' }} />
+              ) : (
+                <PlayCircleIcon sx={{ fontSize: '10px' }} />
+              )}
+            </IconButton>
+            <IconButton onClick={nextTrack} sx={{ p: 0, minWidth: 0 }}>
+              <SkipNextIcon sx={{ fontSize: '10px' }} />
+            </IconButton>
+          </Box>
         </Box>
 
         {/* Progress Bar */}
@@ -146,23 +166,6 @@ function Music() {
             <Typography variant="caption" fontSize="9px">{formatTime(currentTime)}</Typography>
             <Typography variant="caption" fontSize="9px">{formatTime(duration)}</Typography>
           </Box>
-        </Box>
-
-        {/* Controls */}
-        <Box display="flex" alignItems="center" justifyContent="center" gap="8px" mt="5px">
-          <IconButton onClick={prevTrack} sx={{ p: 0, minWidth: 0 }}>
-            <SkipPreviousIcon sx={{ fontSize: '10px' }} />
-          </IconButton>
-          <IconButton onClick={playMusic} sx={{ p: 0, minWidth: 0 }}>
-            {isPlaying ? (
-              <StopCircleIcon sx={{ fontSize: '10px' }} />
-            ) : (
-              <PlayCircleIcon sx={{ fontSize: '10px' }} />
-            )}
-          </IconButton>
-          <IconButton onClick={nextTrack} sx={{ p: 0, minWidth: 0 }}>
-            <SkipNextIcon sx={{ fontSize: '10px' }} />
-          </IconButton>
         </Box>
       </Box>
     </Box>
