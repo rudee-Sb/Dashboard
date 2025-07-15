@@ -119,7 +119,7 @@ function Music() {
 
       {/* Metadata + Controls */}
       <Box display="flex" alignItems="center" width="70%" flexDirection="column">
-        <Box display="flex" alignItems="start" justifyContent="space-between" flexDirection="row">
+        <Box display="flex" alignItems="start" justifyContent="space-between" flexDirection="row" width="100%">
           <Box width="100%">
             <Typography variant="h6" fontWeight="500" fontSize="11px">{track.title}</Typography>
             <Typography variant="h6" fontWeight="400" fontSize="10px" color={colors.greenAccent[400]}>
