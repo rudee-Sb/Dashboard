@@ -62,14 +62,8 @@ function Dashboard() {
                 <Box gridColumn="span 3">
                     <StickyNote />
                 </Box>
-                <Box gridColumn="span 2">
+                <Box gridColumn="span 3">
                     <Music />
-                </Box>
-                <Box gridColumn="span 2">
-                    <ImagePins />
-                </Box>
-                <Box gridColumn="span 2">
-                    <ImagePins />
                 </Box>
             </Box>
         </Box>
