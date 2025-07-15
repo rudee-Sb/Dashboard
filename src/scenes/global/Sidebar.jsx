@@ -5,6 +5,8 @@ import { Box, IconButton, Typography, useTheme } from '@mui/material';
 import { tokens } from "../../theme";
 import { NavLink } from "react-router-dom";
 
+import user_prof from "../../assets/user-prof.jpg";
+
 import NavLinkAdapter from "./NavLinkAdapter";
 
 // home icons
@@ -100,7 +102,7 @@ function Sidebarr() {
                     {!isCollapsed &&
                         <Box mb="25px">
                             <Box display="flex" justifyContent="center" alignItems="center">
-                                <img src={`src\\assets\\user-prof.jpg`} alt="User-Profile" width="80px" height="80px"
+                                <img src={user_prof} alt="User-Profile" width="80px" height="80px"
                                     style={{ cursor: "pointer", borderRadius: "50%" }} />
                             </Box>
 
