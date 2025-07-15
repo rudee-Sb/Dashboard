@@ -136,17 +136,17 @@ function Music() {
            {/* Controls */}
           <Box display="flex" alignItems="center" justifyContent="center" gap="8px" mt="5px">
             <IconButton onClick={prevTrack} sx={{ p: 0, minWidth: 0 }}>
-              <SkipPreviousIcon sx={{ fontSize: '10px' }} />
+              <SkipPreviousIcon sx={{ fontSize: '14px' }} />
             </IconButton>
             <IconButton onClick={playMusic} sx={{ p: 0, minWidth: 0 }}>
               {isPlaying ? (
-                <StopCircleIcon sx={{ fontSize: '10px' }} />
+                <StopCircleIcon sx={{ fontSize: '14px' }} />
               ) : (
-                <PlayCircleIcon sx={{ fontSize: '10px' }} />
+                <PlayCircleIcon sx={{ fontSize: '14px' }} />
               )}
             </IconButton>
             <IconButton onClick={nextTrack} sx={{ p: 0, minWidth: 0 }}>
-              <SkipNextIcon sx={{ fontSize: '10px' }} />
+              <SkipNextIcon sx={{ fontSize: '14px' }} />
             </IconButton>
           </Box>
         </Box>
