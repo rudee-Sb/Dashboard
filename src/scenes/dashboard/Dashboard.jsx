@@ -12,6 +12,7 @@ import StickyNote from "../../widgets/StickyNote"
 import WeeklyTasks from "../../widgets/WeeklyTasks";
 import StatBox from "../components/StatBox";
 import ContriGraph from "../../widgets/GithubContri";
+import Music from "../../widgets/music/MusicPlayer";
 
 function Dashboard() {
 
@@ -62,7 +63,7 @@ function Dashboard() {
                     <StickyNote />
                 </Box>
                 <Box gridColumn="span 2">
-                    <ImagePins />
+                    <Music />
                 </Box>
                 <Box gridColumn="span 2">
                     <ImagePins />
