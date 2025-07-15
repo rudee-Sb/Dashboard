@@ -143,18 +143,26 @@ function Music() {
             className="custom-slider"
           />
           <Box display="flex" justifyContent="space-between">
-            <Typography variant="caption" fontsSize="9px">{formatTime(currentTime)}</Typography>
+            <Typography variant="caption" fontSize="9px">{formatTime(currentTime)}</Typography>
             <Typography variant="caption" fontSize="9px">{formatTime(duration)}</Typography>
           </Box>
         </Box>
 
         {/* Controls */}
         <Box display="flex" alignItems="center" justifyContent="center" gap="8px" mt="5px">
-          <IconButton onClick={prevTrack}><SkipPreviousIcon/></IconButton>
-          <IconButton onClick={playMusic}>
-            {isPlaying ? <StopCircleIcon /> : <PlayCircleIcon />}
+          <IconButton onClick={prevTrack} sx={{ p: 0, minWidth: 0 }}>
+            <SkipPreviousIcon sx={{ fontSize: '10px' }} />
           </IconButton>
-          <IconButton onClick={nextTrack}><SkipNextIcon /></IconButton>
+          <IconButton onClick={playMusic} sx={{ p: 0, minWidth: 0 }}>
+            {isPlaying ? (
+              <StopCircleIcon sx={{ fontSize: '10px' }} />
+            ) : (
+              <PlayCircleIcon sx={{ fontSize: '10px' }} />
+            )}
+          </IconButton>
+          <IconButton onClick={nextTrack} sx={{ p: 0, minWidth: 0 }}>
+            <SkipNextIcon sx={{ fontSize: '10px' }} />
+          </IconButton>
         </Box>
       </Box>
     </Box>
