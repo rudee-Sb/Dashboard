@@ -101,14 +101,14 @@ function Music() {
       gap="10px"
     >
       {/* Image */}
-      <Box width="25%" height="100%">
+      <Box height="70px">
         {track.image && (
           <img
             src={track.image}
             alt={track.title}
             style={{
-              width: '50px',
-              height: "50px",
+              width: '70px',
+              height: "70px",
               borderRadius: '8px',
               objectFit: 'cover'
             }}
@@ -117,10 +117,10 @@ function Music() {
       </Box>
 
       {/* Metadata + Controls */}
-      <Box display="flex" alignItems="center" width="70%" p="0px 8px" flexDirection="column">
-        <Box mt="5px" mb="5px" width="100%">
-          <Typography variant="h6" fontWeight="500">{track.title}</Typography>
-          <Typography variant="subtitle2" fontWeight="400" color={colors.greenAccent[400]}>
+      <Box display="flex" alignItems="center" width="70%" flexDirection="column">
+        <Box width="100%">
+          <Typography variant="h6" fontWeight="500" fontSize="11px">{track.title}</Typography>
+          <Typography variant="h6" fontWeight="400" fontSize="10px" color={colors.greenAccent[400]}>
             {track.artist}
           </Typography>
           <audio
@@ -140,17 +140,17 @@ function Music() {
             value={currentTime}
             step="0.1"
             onChange={handleSeek}
-            style={{ width: '100%' }}
+            className="custom-slider"
           />
-          <Box display="flex" justifyContent="space-between" fontSize="0.85rem">
-            <Typography variant="caption">{formatTime(currentTime)}</Typography>
-            <Typography variant="caption">{formatTime(duration)}</Typography>
+          <Box display="flex" justifyContent="space-between">
+            <Typography variant="caption" fontsSize="9px">{formatTime(currentTime)}</Typography>
+            <Typography variant="caption" fontSize="9px">{formatTime(duration)}</Typography>
           </Box>
         </Box>
 
         {/* Controls */}
         <Box display="flex" alignItems="center" justifyContent="center" gap="8px" mt="5px">
-          <IconButton onClick={prevTrack}><SkipPreviousIcon /></IconButton>
+          <IconButton onClick={prevTrack}><SkipPreviousIcon/></IconButton>
           <IconButton onClick={playMusic}>
             {isPlaying ? <StopCircleIcon /> : <PlayCircleIcon />}
           </IconButton>
