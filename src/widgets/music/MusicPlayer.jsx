@@ -19,11 +19,12 @@ function Music() {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    fetch('/music/songs.json')
+    fetch(`${import.meta.env.BASE_URL}music/songs.json`)
       .then((res) => res.json())
       .then((data) => setTracks(data))
       .catch((err) => console.error('Failed to load tracks:', err));
   }, []);
+
 
   const playMusic = () => {
     if (!audioRef.current) return;
