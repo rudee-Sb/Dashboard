@@ -4,5 +4,101 @@
     "artist": "Kendrick Lamar",
     "src": "/Dashboard/assets/music/The-recipe.mp3",
     "image": "/Dashboard/assets/music/kendrick.jpg"
+  },
+  {
+    "title": "United In Grief",
+    "artist": "Kendrick Lamar",
+    "src": "/Dashboard/assets/music/United-in-Grief.mp3",
+    "image": "/Dashboard/assets/music/kendrick.jpg"
+  },
+  {
+    "title": "reincarnated",
+    "artist": "Kendrick Lamar",
+    "src": "/Dashboard/assets/music/reincarnated.mp3",
+    "image": "/Dashboard/assets/music/kendrick.jpg"
+  },
+  {
+    "title": "Count Me Out",
+    "artist": "Kendrick Lamar",
+    "src": "/Dashboard/assets/music/Count-Me-Out.mp3",
+    "image": "/Dashboard/assets/music/kendrick.jpg"
+  },
+  {
+    "title": "N95",
+    "artist": "Kendrick Lamar",
+    "src": "/Dashboard/assets/music/N95.mp3",
+    "image": "/Dashboard/assets/music/kendrick.jpg"
+  },
+  {
+    "title": "Swimming Pools(Drank)",
+    "artist": "Kendrick Lamar",
+    "src": "/Dashboard/assets/music/Swimming-pools.mp3",
+    "image": "/Dashboard/assets/music/kendrick.jpg"
+  },
+  {
+    "title": "At Peace",
+    "artist": "Karan Aujla",
+    "src": "/Dashboard/assets/music/At-Peace.mp3",
+    "image": "/Dashboard/assets/music/aujla.jpg"
+  },
+  {
+    "title": "Doubt",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Doubt.mp3",
+    "image": "/Dashboard/assets/music/blurryface.jpg"
+  },
+  {
+    "title": "JumpSuit",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Jumpsuit.mp3",
+    "image": "/Dashboard/assets/music/Trench.jpg"
+  },
+  {
+    "title": "Pet Cheetah",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Pet-cheetah.mp3",
+    "image": "/Dashboard/assets/music/Trench.jpg"
+  },
+  {
+    "title": "Bandito",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Bnadito.mp3",
+    "image": "/Dashboard/assets/music/Trench.jpg"
+  },
+  {
+    "title": "The Judge",
+    "artist": "Kendrick Lamar",
+    "src": "/Dashboard/assets/music/The-Judge.mp3",
+    "image": "/Dashboard/assets/music/blurryface.jpg"
+  },
+  {
+    "title": "Next Semester",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Next-semester.mp3",
+    "image": "/Dashboard/assets/music/clancy.jpg"
+  },
+  {
+    "title": "Midwest Indigo",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Midwest-indigo.mp3",
+    "image": "/Dashboard/assets/music/clancy.jpg"
+  },
+  {
+    "title": "Navigating",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Navigating.mp3",
+    "image": "/Dashboard/assets/music/clancy.jpg"
+  },
+  {
+    "title": "At The Risk Of Feeling Dumb",
+    "artist": "Twenty One Pilots",
+    "src": "/Dashboard/assets/music/Feeling-Dumb.mp3",
+    "image": "/Dashboard/assets/music/clancy.jpg"
+  },
+  {
+    "title": "Kho Gaya",
+    "artist": "Big Scratch",
+    "src": "/Dashboard/assets/music/Kho-Gaya.mp3",
+    "image": "/Dashboard/assets/music/kho.jpg"
   }
 ]
