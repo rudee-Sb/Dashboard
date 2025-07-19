@@ -27,7 +27,6 @@ function ImagePins() {
                 </IconButton>
             </Box>
         </>
-        </>
     );
 }
 
