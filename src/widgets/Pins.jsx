@@ -9,8 +9,8 @@ function ImagePins() {
     const colors = tokens(theme.palette.mode);
 
     const fileNames = ["pin1.jpg", "pin2.jpg", "pin3.jpg", "pin4.jpg", "pin5.jpg", "pin6.jpg"];
-    const makeUrl = (name) => `src\\assets\\pins\\${name}`;
-
+    const makeUrl = (name) => `\\assets\\pins\\${name}`;
+    
     const [index, setIndex] = useState(0);
     const [src, setSrc] = useState(makeUrl(fileNames[0]));
 
@@ -19,7 +19,6 @@ function ImagePins() {
         setIndex(nextIndex);
         setSrc(makeUrl(fileNames[nextIndex]));
     };
-
 
     return (
         <>
