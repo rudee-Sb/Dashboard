@@ -63,7 +63,7 @@ function Dashboard() {
                 <Box gridColumn="span 3">
                     <StickyNote />
                 </Box>
-                <Box gridColumn="span 3">
+                <Box gridColumn="span 2" height="140px">
                     <ImagePins />
                 </Box>
             </Box>
