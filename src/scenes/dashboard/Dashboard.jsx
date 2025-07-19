@@ -56,15 +56,16 @@ function Dashboard() {
                 </Box>
 
                 {/* Row 3 */}
-                <Box gridColumn="span 3">
+                <Box gridColumn="span 3" display="grid" gridTemplateRows="1fr 1fr" gap="10px">
                     <Clock ></Clock>
+                    <Music />
                 </Box>
                 <Box gridColumn="span 3">
                     <StickyNote />
                 </Box>
                 <Box gridColumn="span 3">
-                    <Music />
-                </Box>
+                    <ImagePins />
+                </Box
             </Box>
         </Box>
     </>);
