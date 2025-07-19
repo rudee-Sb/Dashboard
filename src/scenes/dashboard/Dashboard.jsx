@@ -65,7 +65,7 @@ function Dashboard() {
                 </Box>
                 <Box gridColumn="span 3">
                     <ImagePins />
-                </Box
+                </Box>
             </Box>
         </Box>
     </>);
