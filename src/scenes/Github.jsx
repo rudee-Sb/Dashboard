@@ -7,7 +7,7 @@ import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import ForkRightOutlinedIcon from '@mui/icons-material/ForkRightOutlined';
 import { useState, useEffect } from "react";
 
-function App() {
+function Github() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   
@@ -67,4 +67,4 @@ function App() {
   )
 }
 
-export default App
+export default Github
