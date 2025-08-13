@@ -38,7 +38,6 @@ function Github() {
       <Box m="20px">
         <Header title="GITHUB" subtitle="Graveyard of Ideas."></Header>
         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="140px" gap="20px" >
-          // row 1
           {
             repos.map(repo => (
             <Box key={repo.id} gridColumn="span 3"  borderRadius="10px" padding="10px" display="flex" alignItems="center" justifyContent="center" sx={{ cursor: "pointer" }} bgcolor="rgb(67, 73, 87)" p="15px">
@@ -47,13 +46,11 @@ function Github() {
                 <Typography variant="h4" fontWeight="bold" color="rgb(146 227 233)">{repo.name}</Typography>
                <Typography
                   variant="h5"
-                  sx={{
-                    color: "rgb(244, 244, 244)",
-                    background: "transparent",
-                    padding: "6px 8px",
-                    border: "1.4px solid rgb(244, 244, 244)",
-                    borderRadius: "12px"
-                  }}
+                  color: repo.private ? "#d73a49" : "#22863a", // red for private, green for public
+                  background: "transparent",
+                  padding: "6px 8px",
+                  border: `1.4px solid ${repo.private ? "#d73a49" : "#22863a"}`,
+                  borderRadius: "12px"
                 >
                   {repo.private ? "private" : "public"}
                 </Typography>
