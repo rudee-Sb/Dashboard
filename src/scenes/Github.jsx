@@ -40,21 +40,30 @@ function Github() {
         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="140px" gap="20px" >
           {
             repos.map(repo => (
-            <Box key={repo.id} gridColumn="span 3"  borderRadius="10px" padding="10px" display="flex" alignItems="center" justifyContent="center" sx={{ cursor: "pointer" }} bgcolor="rgb(67, 73, 87)" p="15px">
-              <Box display="flex" width="100%" alignItems="center" flexDirection="row" gap="15px">
-                <TabOutlinedIcon />
-                <Typography variant="h4" fontWeight="bold" color="rgb(146 227 233)">{repo.name}</Typography>
-               <Typography
+            <Box key={repo.id} gridColumn="span 3"  borderRadius="10px" border="1.4px solid rgb(67, 73, 87)" padding="10px" display="flex" flexDirection="column" alignItems="center" justifyContent="center" bgcolor="transparent" p="15px">
+              <Box display="flex" width="100%" alignItems="center" justifyConetnt="space-between" flexDirection="row" gap="15px">
+                <Box display="flex" alignItems="center">
+                  <TabOutlinedIcon />
+                  <Typography variant="h4" fontWeight="bold" color="rgb(146 227 233)" onClick={() => window.open(repo.html_url, "_blank")} sx={{ cursor: "pointer" }}>{repo.name}</Typography>
+                </Box>
+                <Typography fontSize="12px" fontWeight="bold"
                   sx={{
                         color: repo.private ? "#d73a49" : "#22863a", // red for private, green for public
                         background: "transparent",
-                        padding: "6px 8px",
+                        padding: "5px 7px",
                         border: `1.4px solid ${repo.private ? "#d73a49" : "#22863a"}`,
-                        borderRadius: "12px"
+                        borderRadius: "15px"
                       }}
-                >
+                 >
                   {repo.private ? "private" : "public"}
                 </Typography>
+              </Box>
+              <Box display="flex" alignItems="center" gap="10px">
+                <StarBorderOutlinedIcon sx={{ color: "gold" }} />
+                <Typography>{repo.stargazers_count}</Typography>
+              
+                <ForkRightOutlinedIcon sx={{ color: "lightgray" }} />
+                <Typography>{repo.forks_count}</Typography>
               </Box>
             </Box>
             ))
