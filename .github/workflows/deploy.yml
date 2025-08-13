@@ -1,10 +1,10 @@
 name: Deploy to GitHub Pages
 
-# currently paused
-# on:
-#   push:
-#     branches:
-#       - main  
+# currently not paused
+on:
+  push:
+    branches:
+      - main  
 
 jobs:
   deploy:
