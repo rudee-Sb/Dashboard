@@ -7,7 +7,7 @@ import Dashboard from './scenes/dashboard/Dashboard';
 import NoteApp from './scenes/notes/NoteApp';
 import Pomodoro from './scenes/Pomodoro';
 import Calendar from './scenes/Calendar'
-import Calendar from './scenes/Github'
+import Github from './scenes/Github'
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
                             <Route path='/pomodoro' element={ <Pomodoro /> }></Route>
                             <Route path='/notes' element={ <NoteApp /> }></Route>
                             <Route path='/calendar' element={ <Calendar /> }></Route>
-                            <Route path='/calendar' element={ <Github /> }></Route>
+                            <Route path='/github' element={ <Github /> }></Route>
                         </Routes>
                     </main>
                 </div>
