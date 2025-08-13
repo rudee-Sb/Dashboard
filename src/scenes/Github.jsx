@@ -45,12 +45,13 @@ function Github() {
                 <TabOutlinedIcon />
                 <Typography variant="h4" fontWeight="bold" color="rgb(146 227 233)">{repo.name}</Typography>
                <Typography
-                  variant="h5"
-                  color: repo.private ? "#d73a49" : "#22863a", // red for private, green for public
-                  background: "transparent",
-                  padding: "6px 8px",
-                  border: `1.4px solid ${repo.private ? "#d73a49" : "#22863a"}`,
-                  borderRadius: "12px"
+                  sx={{
+                        color: repo.private ? "#d73a49" : "#22863a", // red for private, green for public
+                        background: "transparent",
+                        padding: "6px 8px",
+                        border: `1.4px solid ${repo.private ? "#d73a49" : "#22863a"}`,
+                        borderRadius: "12px"
+                      }}
                 >
                   {repo.private ? "private" : "public"}
                 </Typography>
