@@ -8,6 +8,7 @@ import FitnessCenterOutlinedIcon from '@mui/icons-material/FitnessCenterOutlined
 import Header from "../global/Header";
 import Clock from "../../widgets/Clock";
 import ImagePins from "../../widgets/Pins";
+import Streaks from "../../widgets/Streaks";
 import StickyNote from "../../widgets/StickyNote"
 import WeeklyTasks from "../../widgets/WeeklyTasks";
 import StatBox from "../components/StatBox";
@@ -52,7 +53,7 @@ function Dashboard() {
                     <WeeklyTasks onTasksUpdate={setTasks} />
                 </Box>
                 <Box gridColumn="span 1" height="145px">
-                    
+                    <Streaks />
                 </Box>
 
                 {/* Row 3 */}
@@ -72,3 +73,4 @@ function Dashboard() {
 }
 
 export default Dashboard
+
