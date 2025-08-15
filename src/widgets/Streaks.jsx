@@ -18,18 +18,18 @@ function Streaks() {
 
   return (
     <>
-      <Box width="100%" height="100%" borderRadius="10px" bgcolor={colors.primary[400]} padding="10px" display="flex" alignItems="center" justifyContent="space-between" flexDirection="column" gap="15px">
-        <Box display="flex" alignItems="center" justifyContent="space-between" flexDirection="column" gap="10px" >
-          <IconButton sx={{ color: "#ff4000" }} size="25">
+      <Box width="100%" height="100%" borderRadius="10px" bgcolor={colors.primary[400]} padding="10px" display="flex" alignItems="center" justifyContent="space-between" flexDirection="column" gap="5px">
+        <Box display="flex" alignItems="center" justifyContent="space-between" flexDirection="column">
+          <IconButton sx={{ color: "#ff4000" }} size="20">
             <WhatshotOutlinedIcon/>
           </IconButton>
-          <h3>{streak.curStreak}</h3>
+          <h3 style={{ fontSize:"15px", margin:"0px" }} >{streak.curStreak}</h3>
         </Box>
-        <Box display="flex" alignItems="center" justifyContent="space-between" flexDirection="column" gap="10px">
-          <IconButton sx={{ color: "#52bf90" }} size="25">
+        <Box display="flex" alignItems="center" justifyContent="space-between" flexDirection="column">
+          <IconButton sx={{ color: "#52bf90" }} size="20">
             <FitnessCenterOutlinedIcon/>
           </IconButton>
-          <h3>3</h3>
+          <h3 style={{ fontSize:"15px", margin:"0px" }} >3</h3>
         </Box>
       </Box>
   </>
