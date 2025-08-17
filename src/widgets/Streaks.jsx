@@ -10,11 +10,16 @@ function Streaks() {
   
   const [streak, setStreak] = useState({ curStreak: 0, longestStreak: 0 });
 
-  useEffect(() => {
-    fetch("https://solitary-cake-1e15.rudrabhau844.workers.dev/")
-      .then(res => res.json())
-      .then(data => setStreak(data));
-  }, []);
+ useEffect(() => {
+  fetch("https://solitary-cake-1e15.rudrabhau844.workers.dev/")
+    .then(res => res.json())
+    .then(data => {
+      console.log("Streak API data:", data);
+      setStreak(data);
+    })
+    .catch(err => console.error("Fetch error:", err));
+}, []);
+
 
   return (
     <>
