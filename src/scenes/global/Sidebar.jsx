@@ -29,11 +29,17 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 const Item = ({ title, selected, setSelected, icon, to }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const isExternal = to.startsWith("http");
 
     return (
         <MenuItem
-            component={<NavLinkAdapter />}
-            to={to}
+            component={
+                isExternal ? (
+                    <a href={to} target="_blank" rel="noopener noreferrer" />
+                ) : (
+                    <NavLinkAdapter to={to} />
+                )
+            }
             icon={icon}
             active={selected === title}
             onClick={() => setSelected(title)}
@@ -43,6 +49,7 @@ const Item = ({ title, selected, setSelected, icon, to }) => {
         </MenuItem>
     );
 };
+
 
 
 
@@ -121,7 +128,7 @@ function Sidebarr() {
                             <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15px 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >PROJECTS</Typography>
                             <Item title="Work" to="/projects" icon={<QuizOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Github" to="/github" icon={<GitHubIcon />} selected={selected} setSelected={setSelected}></Item>
-                            <Item title="Linkedin" to="/socials" icon={<LinkedInIcon />} selected={selected} setSelected={setSelected}></Item>
+                            <Item title="Linkedin" to="https://www.linkedin.com/feed/" icon={<LinkedInIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Typography variant="h5" fontSize={!isCollapsed ? "14px" : "12px"} margin={!isCollapsed ? "15px 0px 5px 20px" : "15px 0 0 0"} textAlign={!isCollapsed ? null : "center"} color={colors.grey[300]} >UTILITIES</Typography>
                             <Item title="Study Timer" to="/pomodoro" icon={<LockClockOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
                             <Item title="Notes" to="/notes" icon={<EditNoteOutlinedIcon />} selected={selected} setSelected={setSelected}></Item>
