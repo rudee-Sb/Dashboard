@@ -49,11 +49,11 @@ function Dashboard() {
                 <Box gridColumn="span 7" height="145px" >
                     <ContriGraph ></ContriGraph>
                 </Box>
-                <Box gridColumn="span 4" height="145px" >
-                    <WeeklyTasks onTasksUpdate={setTasks} />
-                </Box>
                 <Box gridColumn="span 1" height="145px">
                     <Streaks />
+                </Box>
+                <Box gridColumn="span 4" height="340px" >
+                    <WeeklyTasks onTasksUpdate={setTasks} />
                 </Box>
 
                 {/* Row 3 */}

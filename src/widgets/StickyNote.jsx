@@ -8,7 +8,7 @@ function StickyNote() {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box display="flex" justifyContent="space-between" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="auto">
+        <Box display="flex" justifyContent="space-between" flexDirection="column" padding="15px" borderRadius="10px" bgcolor={colors.primary[400]} width="auto" height="180px">
             <Typography variant="h3" color={colors.grey[100]} fontWeight="600" mb={1}>NOTES</Typography>
             <AddNote w="100%" h="110px" />
         </Box>
