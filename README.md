@@ -65,7 +65,6 @@ This is a personal project, but feel free to submit PRs for bug fixes or enhance
 
 ## 🧩 Upcoming Enhancements
 
-* Music player integration (currently in progress)
 * Improved sticky notes and task animations
 * Mobile responsiveness
 
@@ -74,3 +73,4 @@ This is a personal project, but feel free to submit PRs for bug fixes or enhance
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
